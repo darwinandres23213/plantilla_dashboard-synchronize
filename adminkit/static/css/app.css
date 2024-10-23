@@ -124,6 +124,20 @@
     --bs-form-valid-border-color: #1cbb8c;
     --bs-form-invalid-color: #dc3545;
     --bs-form-invalid-border-color: #dc3545
+
+    /*** ROOT SYNCHRONIZE ***/
+
+    scroll-behavior: smooth;
+    --primary-color: #39A900;
+    --secondary-color: #00324D;
+    --complementary-color1: #385c57;
+    --complementary-color2: #e6e6e6;
+    --degrade: linear-gradient(#39a900, #A1D687, #fff);
+    --font-size-titulos-h1: 48px;    
+    --font-size-titulos-h2: 40px;
+    --font-size-titulos-h3: 32px;
+    --font-size-titulos-h4: 24px;
+    --font-size-parrafos: 24px;
 }
 
 *,
@@ -14337,7 +14351,7 @@ footer.footer ul {
 .hamburger,
 .hamburger:after,
 .hamburger:before {
-    background: #495057;
+    background: #fff !important;
     border-radius: 1px;
     content: "";
     cursor: pointer;
@@ -14354,19 +14368,21 @@ footer.footer ul {
 .hamburger:before {
     position: absolute;
     top: -7.5px;
-    width: 24px
+    width: 24px;
+    background: #fff;
 }
 
 .hamburger:after {
     bottom: -7.5px;
     position: absolute;
-    width: 16px
+    width: 16px;
+    background: #fff;
 }
 
 .sidebar-toggle:hover .hamburger,
 .sidebar-toggle:hover .hamburger:after,
 .sidebar-toggle:hover .hamburger:before {
-    background: #3b7ddd
+    background: #3b7ddd;
 }
 
 .hamburger-right,
@@ -14584,21 +14600,28 @@ screen and (-ms-high-contrast:active) {
 a.sidebar-link {
     background: var(--sidebar);
     border-left: 3px solid transparent;
-    color: rgba(233, 236, 239, .5);
+    color: #607d8b;
     cursor: pointer;
     display: block;
-    font-weight: 400;
+    font-weight: 700;
     padding: .625rem 1.625rem;
     position: relative;
     text-decoration: none;
-    transition: background .1s ease-in-out
+    transition: background .1s ease-in-out;
+}
+
+.ring,
+.settings,
+.message,
+.profileNav{
+    color: #fff !important;
 }
 
 .sidebar-link i,
 .sidebar-link svg,
 a.sidebar-link i,
 a.sidebar-link svg {
-    color: rgba(233, 236, 239, .5);
+    color: #607d8b;
     margin-right: .75rem
 }
 
@@ -14607,28 +14630,55 @@ a.sidebar-link svg {
 }
 
 .sidebar-link:hover {
-    background: var(--sidebar);
+    background: #607d8b transparent;
     border-left-color: transparent
 }
 
 .sidebar-link:hover,
 .sidebar-link:hover i,
 .sidebar-link:hover svg {
-    color: rgba(233, 236, 239, .75)
+    color: var(--primary-color)
 }
 
 .sidebar-item.active .sidebar-link:hover,
 .sidebar-item.active>.sidebar-link {
     background: linear-gradient(90deg, rgba(59, 125, 221, .1), rgba(59, 125, 221, .088) 50%, transparent);
-    border-left-color: #3b7ddd;
-    color: #e9ecef
+    border-left-color: var(--primary-color);
+    color: var(--primary-color)
 }
+
+/* Arrow */
+
+.align-middle {
+    font-size: 16px; /* Ajusta el tamaño de fuente si es necesario */
+  }
+  
+  .arrow {
+    font-size: 14px; /* Tamaño del icono */
+    color: #333; /* Cambia el color del icono si es necesario */
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow.rotate {
+    transform: rotate(90deg); /* Rota el ícono 90 grados hacia abajo */
+  }
+  
+  /* Para asegurar la alineación en dispositivos más pequeños */
+  @media (max-width: 576px) {
+    .align-middle {
+      font-size: 14px; /* Ajusta el tamaño de fuente en dispositivos pequeños */
+    }
+  
+    .arrow {
+      font-size: 12px; /* Ajusta el tamaño del icono en dispositivos pequeños */
+    }
+  }
 
 .sidebar-item.active .sidebar-link:hover i,
 .sidebar-item.active .sidebar-link:hover svg,
 .sidebar-item.active>.sidebar-link i,
 .sidebar-item.active>.sidebar-link svg {
-    color: #e9ecef
+    color: var(--primary-color)
 }
 
 .sidebar-brand {
