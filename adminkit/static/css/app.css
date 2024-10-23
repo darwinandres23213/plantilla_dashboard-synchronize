@@ -14034,17 +14034,6 @@ fieldset:disabled .btn {
     --bs-btn-disabled-border-color: #181717
 }
 
-.btn-github,
-.btn-github.disabled,
-.btn-github.focus,
-.btn-github.hover:not(:disabled):not(.disabled),
-.btn-github:disabled,
-.btn-github:focus,
-.btn-github:hover:not(:disabled):not(.disabled),
-.show>.btn-github.dropdown-toggle {
-    color: #fff
-}
-
 .btn-instagram {
     --bs-btn-color: #fff;
     --bs-btn-bg: #e4405f;
@@ -14088,34 +14077,6 @@ fieldset:disabled .btn {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #bd081c;
     --bs-btn-disabled-border-color: #bd081c
-}
-
-.btn-pinterest,
-.btn-pinterest.disabled,
-.btn-pinterest.focus,
-.btn-pinterest.hover:not(:disabled):not(.disabled),
-.btn-pinterest:disabled,
-.btn-pinterest:focus,
-.btn-pinterest:hover:not(:disabled):not(.disabled),
-.show>.btn-pinterest.dropdown-toggle {
-    color: #fff
-}
-
-.btn-flickr {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #0063dc;
-    --bs-btn-border-color: #0063dc;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0054bb;
-    --bs-btn-hover-border-color: #004fb0;
-    --bs-btn-focus-shadow-rgb: 38, 122, 225;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #004fb0;
-    --bs-btn-active-border-color: #004aa5;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0063dc;
-    --bs-btn-disabled-border-color: #0063dc
 }
 
 .btn-flickr,
@@ -16096,4 +16057,49 @@ span.flatpickr-weekday {
     padding: 5px;
     border: 1px solid rgba(120, 130, 140, 0.13);
     border-radius: 100%;
+}
+
+.bi{
+    color: #ffff;
+    font-size: xx-large;
+}
+.page-titles{
+    background: #ffff;
+}
+
+.simplebar-mask{
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);  
+}  
+.sidebar-submenu {
+    display: none; 
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-submenu.active {
+    display: block; 
+}
+
+.sidebar-submenu .sidebar-item {
+    padding-left: 20px; 
+}
+
+.page-titles{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    justify-content: space-between;
+    padding: 0 6%;
+}
+.page-title{
+    color: #39a900;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.bi.bi-chevron-right{
+    color: #000;
+    font-size: small;
 }
