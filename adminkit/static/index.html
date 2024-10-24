@@ -23,7 +23,7 @@
 
 <body>
 	<div class="wrapper">
-		<nav id="sidebar" class="sidebar js-sidebar">
+		<nav id="sidebar" class="sidebar js-sidebar ">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="index.html">
           		<span class="align-middle"><img src="https://synchronize-center.com/App/Views/assets/images/logo-icon.png" alt=""><img src="https://synchronize-center.com/App/Views/assets/images/logo-text.png" alt=""></span>
@@ -227,11 +227,11 @@
 				</ul>
 
 			</div>
-		</nav>
+		</nav>gg
 
 		<div class="main">
-			<nav class="navbar navbar-expand navbar-light navbar-bg">
-				<a class="sidebar-toggle js-sidebar-toggle">
+			<nav class="navbar top-navbar  fixed-top navbar-expand navbar-light navbar-bg" id="idNav">
+				<a class="sidebar-toggle js-sidebar-toggle" id="btnSidebar">
                   <i class="bi bi-list align-self-center"></i>
         	    </a>
 
@@ -558,14 +558,25 @@
 	integrity="sha384-ppZX+5eGAJW+e95AXWL7BpXktYOHQ2GZklk2pYT8FMr1Tc/UHEkAWj6KjkqW+fHR" crossorigin="anonymous"></script>
 	<script src="js/events.js"></script>
 	<script>
-function toggleSubmenu(event) {
-    event.preventDefault(); // Evitar que se siga el enlace
-    const submenu = event.target.closest('.sidebar-item').querySelector('.sidebar-submenu');
+		function toggleSubmenu(event) {
+			event.preventDefault();
+			const submenu = event.target.closest('.sidebar-item').querySelector('.sidebar-submenu');
 
-    if (submenu) {
-        submenu.classList.toggle('active'); // Alternar clase activa
-    }
-}
+			if (submenu) {
+				submenu.classList.toggle('active'); 
+			}
+		}
+		document.getElementById('btnSidebar').addEventListener('click', () => {
+			console.log("gchghgh")
+			const nav = document.getElementById('idNav');
+			const sidebar = document.getElementById('sidebar');
+
+			if (!sidebar.classList.contains('collapsed')) {
+				nav.classList.toggle('open-side');
+			}
+		});
+
+
 
 	</script>
 
